@@ -1,147 +1,207 @@
-/* Reset some default styles for the body and ul */
-body, ul {
-    margin: 0;
-    padding: 0;
+.html1, .html1 ul {
+    margin: 0; /*krašto tarpai*/
+    padding: 0; /*vidiniai tarpai*/
 }
 
-/* Create a flex container for the main content */
-body {
+/*pagrindinis konteineris*/
+.html1 {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+    overflow-y: scroll;
 }
 
-
-/* Apply styles to the header */
-header {
-    background-color: #00000060;
-    color: #ffffff;
+/* headeris */
+.html1 header {
+    background-color: #252126;
+    color: #ffffff; 
     text-align: center;
-    padding: 20px;
+    padding: 20px; /* tarpas*/
+}
 
-
-.header-content {
+/* Headerio vidus */
+.html1 .header-content {
     display: flex;
-    justify-content: space-between;
+    flex-direction: column; 
+    justify-content: center; 
     align-items: center;
 }
 
-.header-left {
-    flex: 1;
-}
 
-.header-right {
-    display: flex;
-    gap: 10px;
-}
-
-.btn {
-    padding: 10px 20px;
-    font-size: 18px;
-    background-color: #000000;
-    color: #fff;
-    border: none;
-    cursor: pointer;
-    transition: background-color 0.3s ease-in-out;
-}
-
-.btn:hover {
-    background-color: #333;
-}
-
-header h1 {
+.html1 .page-title {
     font-size: 36px;
+    margin-bottom: 10px;
 }
 
-/* Style the navigation menu */
-nav ul {
+.html1 .sub-title {
+    font-size: 24px;
+}
+
+
+.html1 nav ul {
     list-style-type: none;
     display: flex;
-    gap: 20px;
     align-items: center;
+    background-color: #000000; 
+    padding: 10px 0; 
 }
 
-nav li {
+.html1 nav li {
     padding: 10px;
 }
 
-nav a {
+.html1 nav a {
     text-decoration: none;
-    color: #333;
-    font-size: 30px;
+    color: #ffffff;
+    font-size: 24px; 
     font-weight: bold;
     transition: color 0.3s;
 }
 
-/* Change link color on hover */
-nav a:hover {
-    color: #272508;
+.html1 nav a:hover {
+    color: #270aca;
 }
 
-/* Style the car slideshow */
-.p-modeliai {
+.html1 .p-modeliai {
+    font-size: 30px;
     text-align: center;
     padding: 20px;
     flex: 1;
     display: flex;
     flex-direction: column;
     align-items: center;
+    background: #333;
 }
 
-.car-slideshow {
-    display: flex;
-    overflow: hidden;
-    width: 80%;
-    margin: 0 auto;
-    position: relative;
-    max-height: calc(100% - 60px);
+.html1 .car-gallery {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); 
+    grid-gap: 20px; 
+    align-items: center;
+    background: #000000; 
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
 }
 
-.car {
-    flex: 0 0 100%;
+.html1 .car {
     text-align: center;
-    animation: slide 30s linear infinite;
-    transition: opacity 0.5s;
-    opacity: 1;
+    background: #fff; 
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
 }
 
-.car img {
+.html1 .car img {
     max-width: 100%;
     height: auto;
+    transition: transform 0.3s ease-in-out; 
 }
-
-/* Style the contact information section */
-.contact-info {
-    background-color: #7b7a7a;
+.html1 .contact-info {
+    background-color: #330000;
+    color: #fff;
     padding: 20px;
     flex: 0;
 }
 
-.contact-info h2 {
-    font-size: 24px;
-    margin-bottom: 10px;
-}
-
-address p {
-    margin: 5px 0;
-}
-
-/* Push the footer to the bottom of the page */
-footer {
-    background-color: #333;
+.html1 footer {
+    background-color: #000000;
     color: #fff;
     text-align: center;
     padding: 10px;
     margin-top: auto;
 }
 
-/* Animation for the slideshow */
-@keyframes slide {
-    0%, 100% { transform: translateX(0); }
-    10% { transform: translateX(0); }
-    30% { transform: translateX(-100%); }
-    50% { transform: translateX(-100%); }
-    70% { transform: translateX(-200%); }
-    90% { transform: translateX(-200%); }
+.html1 .car-gallery::before {
+    content: "";
+    background-image: linear-gradient(45deg, #ff9933, #ffcc00, #ffcc00, #ff9933);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: -1;
+    border-radius: 10px;
 }
+
+
+.html1 .blue-text {
+    color: #0077cc; 
+    display: inline-block;
+    margin-left: 10px;
+}
+
+.html1 .button-container {
+    display: flex;
+    gap: 10px;
+}
+
+.html1 .first-car-clickable {
+    cursor: pointer;
+    border: 2px solid #0c1a97;
+    transition: transform 0.3s ease-in-out, border-color 0.3s ease-in-out;
+}
+
+.html1 .first-car-clickable:hover {
+    transform: scale(1.05);
+    border-color: #252126;
+}
+
+/*uzd_01_masina.html dokumento css kodas*/
+.html2, .html2 ul {
+    margin: 0;
+    padding: 0;
+}
+
+/* Create a flex container for the main content */
+.html2 {
+    background-color: #f5f5f5;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 0;
+}
+
+/* Apply styles to the header */
+.html2 header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+}
+
+
+.html2 h1 {
+    margin: 0;
+}
+
+.html2 .car-detail {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    margin: 20px;
+}
+
+.html2 img {
+    max-width: 100%;
+    height: auto;
+    margin: 10px 0;
+    transition: transform 0,3s ease-in-out;
+    cursor: pointer;
+}
+
+.html2 img:hover {
+    transform: scale(1.05);
+}
+
+.html2 .back-button {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+    border-radius: 5px;
+    margin: 20px;
+}
+
+.html2 .back-button:hover {
+    background-color: #555;
 }
